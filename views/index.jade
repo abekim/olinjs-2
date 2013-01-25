@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(method="POST", action="/cats/new")
+    input(type="input", name="catName")
+    input(type="submit", name="add cat")
