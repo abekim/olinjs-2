@@ -12,7 +12,7 @@ var express = require('express')
 
 var app = express();
 
-mongoose.connect('localhost');
+mongoose.connect(process.env.MONGOLAB_URI || 'localhost');
 
 var schema = mongoose.Schema({ name: 'string' });
 var Cat = mongoose.model('Cat', schema);
